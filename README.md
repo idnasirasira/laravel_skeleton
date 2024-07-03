@@ -74,11 +74,11 @@ These are the main packages used in this Laravel project:
 
 ### Seeding the Database
 
-    To seed the database with sample users, run the following Artisan command:
+To seed the database with sample users, run the following Artisan command:
 
-    ```bash
-    php artisan db:seed --class=UsersTableSeeder
-    ```
+```bash
+php artisan db:seed --class=UsersTableSeeder
+```
 
 ### License
 
