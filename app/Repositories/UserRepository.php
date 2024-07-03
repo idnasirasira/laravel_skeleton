@@ -33,4 +33,9 @@ class UserRepository implements UserRepositoryInterface
     {
         User::destroy($id);
     }
+
+    public function export()
+    {
+        User::all();
+    }
 }

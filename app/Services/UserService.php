@@ -2,7 +2,9 @@
 
 namespace App\Services;
 
+use App\Exports\UsersExport;
 use App\Interfaces\UserRepositoryInterface;
+use Maatwebsite\Excel\Facades\Excel;
 
 class UserService
 {
@@ -36,5 +38,23 @@ class UserService
     public function deleteUser($id)
     {
         return $this->userRepository->delete($id);
+    }
+
+    function exportUsers($format)
+    {
+        $users = $this->userRepository->export();
+
+        $validFormats = ['xlsx', 'csv', 'pdf'];
+
+        if (!in_array($format, $validFormats)) {
+            throw new \Exception('Invalid Format');
+        }
+
+        if ($format == 'pdf') {
+            // TODO: Implement Export To PDF
+        }
+
+        $filename = 'users.' . $format;
+        return Excel::download(new UsersExport($users), $filename);
     }
 }
