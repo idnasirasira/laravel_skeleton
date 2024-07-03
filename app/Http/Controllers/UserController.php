@@ -20,7 +20,8 @@ class UserController extends Controller
     public function index()
     {
         $users = $this->userService->getAllUsers();
-        return response(200)->json($users);
+
+        return view('users.index', compact('users'));
     }
 
     /**

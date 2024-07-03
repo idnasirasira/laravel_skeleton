@@ -14,6 +14,8 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    @stack('styles')
 </head>
 
 <body class="font-sans antialiased">
@@ -34,6 +36,13 @@
             {{ $slot }}
         </main>
     </div>
+
+    {{-- Global Scripts --}}
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    {{-- Page Level Scripts --}}
+    @stack('scripts')
 </body>
 
 </html>
