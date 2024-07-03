@@ -7,6 +7,12 @@ use App\Models\User;
 
 class UserRepository implements UserRepositoryInterface
 {
+
+    function assignRoleToUser(User $user, string $roles): void
+    {
+        $user->assignRole($roles);
+    }
+
     public function all()
     {
         return User::all();

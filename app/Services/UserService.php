@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Exports\UsersExport;
 use App\Interfaces\UserRepositoryInterface;
+use App\Models\User;
 use Maatwebsite\Excel\Facades\Excel;
 
 class UserService
@@ -13,6 +14,11 @@ class UserService
     public function __construct(UserRepositoryInterface $userRepository)
     {
         $this->userRepository = $userRepository;
+    }
+
+    public function assignRoleToUser(User $user, $roles)
+    {
+        $this->userRepository->assignRoleToUser($user, $roles);
     }
 
     public function getAllUsers()
