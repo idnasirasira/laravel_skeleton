@@ -17,6 +17,16 @@ This project is a Laravel version 11 application built using the Repository Serv
 -   PHP >= 8.2
 -   Composer
 
+## Dependencies
+
+These are the main packages used in this Laravel project:
+
+-   **Laravel Framework**: Version 8.x
+-   **Laravel Breeze**: For implementation Laravel's authentication features.
+-   **PHPUnit**: For testing
+-   **Laravel Excel**: For exporting data to Excel and other formats
+-   **Mockery**: For mocking dependencies in tests
+
 ### Installation Steps
 
 1. **Clone the Repository**
