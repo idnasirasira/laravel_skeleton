@@ -36,6 +36,6 @@ class UserRepository implements UserRepositoryInterface
 
     public function export()
     {
-        User::all();
+        return User::select('id', 'name', 'created_at')->get();
     }
 }

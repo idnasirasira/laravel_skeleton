@@ -42,8 +42,6 @@ class UserService
 
     function exportUsers($format)
     {
-        $users = $this->userRepository->export();
-
         $validFormats = ['xlsx', 'csv', 'pdf'];
 
         if (!in_array($format, $validFormats)) {
@@ -54,7 +52,10 @@ class UserService
             // TODO: Implement Export To PDF
         }
 
-        $filename = 'users.' . $format;
+        $filename =  'Users_export_' . date('Y_m_d_H_i_s') . '.' . $format;
+
+        $users = $this->userRepository->export();
+
         return Excel::download(new UsersExport($users), $filename);
     }
 }

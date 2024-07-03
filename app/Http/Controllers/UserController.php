@@ -74,4 +74,12 @@ class UserController extends Controller
         $this->userService->deleteUser($id);
         return response()->json(null, 204);
     }
+
+    /**
+     * Exporting resource from storage.
+     */
+    function export($type)
+    {
+        return $this->userService->exportUsers($type);
+    }
 }
