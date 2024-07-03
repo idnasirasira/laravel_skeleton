@@ -14,7 +14,7 @@ This project is a Laravel version 11 application built using the Repository Serv
 
 ### System Requirements
 
--   PHP >= 8.4
+-   PHP >= 8.2
 -   Composer
 
 ### Installation Steps
