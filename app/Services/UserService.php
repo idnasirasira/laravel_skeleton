@@ -50,6 +50,7 @@ class UserService
 
         if ($format == 'pdf') {
             // TODO: Implement Export To PDF
+            throw new \Exception('Upcoming feature');
         }
 
         $filename =  'Users_export_' . date('Y_m_d_H_i_s') . '.' . $format;
