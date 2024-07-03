@@ -27,7 +27,7 @@ This project is a Laravel version 11 application built using the Repository Serv
 
 These are the main packages used in this Laravel project:
 
--   **Laravel Framework**: Version 8.x
+-   **Laravel Framework**: Version 11.x
 -   **Laravel Breeze**: For implementation Laravel's authentication features.
 -   **PHPUnit**: For testing.
 -   **Laravel Excel**: For exporting data to Excel and other formats.
