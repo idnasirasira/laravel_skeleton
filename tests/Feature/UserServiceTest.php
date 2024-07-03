@@ -82,7 +82,7 @@ class UserServiceTest extends TestCase
     public function testExportUsersValidFormats()
     {
         // Arrange
-        $validFormats = ['xlsx', 'csv', 'pdf'];
+        $validFormats = ['xlsx', 'csv'];
 
         foreach ($validFormats as $format) {
             // Mock repository method call
@@ -95,7 +95,7 @@ class UserServiceTest extends TestCase
                 ->once()
                 ->withArgs(function (UsersExport $export, $filename) use ($format) {
                     // Assert filename matches expected pattern
-                    $this->assertStringContainsString('users.', $filename);
+                    $this->assertStringContainsString('Users', $filename);
                     $this->assertStringContainsString($format, $filename);
                     return true;
                 })

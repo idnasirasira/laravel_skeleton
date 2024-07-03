@@ -2,15 +2,16 @@
 
 namespace App\Exports;
 
-use Illuminate\Database\Eloquent\Collection;
+use Carbon\Carbon;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
+use Maatwebsite\Excel\Concerns\WithMapping;
 
-class UsersExport implements FromCollection, WithHeadings
+class UsersExport implements FromCollection, WithHeadings, WithMapping
 {
     protected $users;
 
-    public function __construct(Collection $users)
+    public function __construct($users)
     {
         $this->users = $users;
     }
@@ -29,6 +30,15 @@ class UsersExport implements FromCollection, WithHeadings
             '#',
             'User',
             'Date',
+        ];
+    }
+
+    public function map($user): array
+    {
+        return [
+            $user->id,
+            $user->name,
+            Carbon::parse($user->created_at)->format('Y-m-d H:i:s'),
         ];
     }
 }
