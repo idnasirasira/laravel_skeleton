@@ -9,6 +9,10 @@ This project is a Laravel version 11 application built using the Repository Serv
 -   **Repository Pattern**: Provides an abstraction for data access, decoupling business logic from storage implementation details.
 -   **Service Pattern**: Implements business rules and uses repositories for data access and manipulation.
 -   **Interface Pattern**: Utilizes interfaces to define contracts for operations that implementing classes must adhere to.
+-   ### Export to Excel
+    -   Allows users to export data to Excel format.
+    -   Uses Laravel Excel package for seamless integration.
+    -   Provides downloadable files with user data in various formats.
 
 ## Installation
 
