@@ -22,8 +22,8 @@ This project is a Laravel version 11 application built using the Repository Serv
 1. **Clone the Repository**
 
     ```bash
-    git clone https://github.com/your-account/repository-service-interface-laravel.git
-    cd repository-service-interface-laravel
+    git clone https://github.com/idnasirasira/laravel_skeleton.git
+    cd laravel_skeleton
     ```
 
 2. **Install Dependencies**
