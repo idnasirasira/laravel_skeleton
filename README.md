@@ -72,6 +72,14 @@ These are the main packages used in this Laravel project:
 
     The application will run at http://localhost:8000.
 
+### Seeding the Database
+
+    To seed the database with sample users, run the following Artisan command:
+
+    ```bash
+    php artisan db:seed --class=UsersTableSeeder
+    ```
+
 ### License
 
 This project is licensed under the MIT License. See the LICENSE file for more information.
