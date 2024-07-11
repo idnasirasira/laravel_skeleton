@@ -21,7 +21,9 @@ class UserController extends Controller
     {
         $users = $this->userService->getAllUsers();
 
-        return view('users.index', compact('users'));
+        // dd($users);
+
+        return view('pages.stisla.modules-datatables', compact('users'));
     }
 
     /**

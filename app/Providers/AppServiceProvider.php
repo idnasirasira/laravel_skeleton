@@ -2,9 +2,10 @@
 
 namespace App\Providers;
 
-use App\Interfaces\UserRepositoryInterface;
 use App\Repositories\UserRepository;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
+use App\Interfaces\UserRepositoryInterface;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,6 +22,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Paginator::useBootstrapFour();
     }
 }
